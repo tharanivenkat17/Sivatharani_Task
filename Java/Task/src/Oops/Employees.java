@@ -41,14 +41,16 @@ class JavaDeveloper extends Developer{
 	String position1;
 	void JavaDeveloperDetails(String position){
 		this.position1 = position;
-		System.out.println(emp_id + " - " + emp_name + " - " + manager +  " - " + dept + " - " + position1);
+		System.out.println(emp_id + " - " + emp_name +  " - " + dept + " - " + position1);
+		System.out.println("Manager" + manager);
 	}
 }
 class ReactDeveloper extends Developer{
 	String position2;
 	void ReactDeveloperDetails(String position){
 		this.position2 = position;
-		System.out.println(emp_id + " - " + emp_name + " - " + manager +  " - " + dept + " - " + position2);
+		System.out.println(emp_id + " - " + emp_name + " - " + dept + " - " + position2);
+		System.out.println("Manager" + manager);
 	}
 }
 
@@ -61,13 +63,24 @@ public class Employees {
 		scan.nextLine();
 		String emp_name = scan.nextLine();
 		
-		JavaDeveloper j = new JavaDeveloper();
-		j.EmployeeDetails(123 , "siva");
-		j.JavaDeveloperDetails("Java Developer");
+		System.out.println("Enter Java Developer or React Developer");
 		
-		ReactDeveloper r = new ReactDeveloper();
-		r.EmployeeDetails(129 , "tharani");
-		r.ReactDeveloperDetails("React Developer");
+		String position = scan.nextLine();
+		
+		if(position.equalsIgnoreCase("Java Developer")) {
+			JavaDeveloper j = new JavaDeveloper();
+			j.EmployeeDetails(emp_id , emp_name);
+			j.JavaDeveloperDetails("Java Developer");
+		}
+		else if(position.equalsIgnoreCase("React Developer")) {
+			ReactDeveloper r = new ReactDeveloper();
+			r.EmployeeDetails(emp_id , emp_name);
+			r.ReactDeveloperDetails("React Developer");
+		}
+		else {
+			System.out.println("Invalid Entry");
+		}
+		
+		
 	}
-
 }
