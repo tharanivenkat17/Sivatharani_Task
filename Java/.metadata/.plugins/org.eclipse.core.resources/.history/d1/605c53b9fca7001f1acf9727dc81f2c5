@@ -1,0 +1,59 @@
+package Abstraction;
+
+//SINGLE LEVEL
+class Employees{
+	int emp_id;
+	String emp_name;
+	void EmployeeDetails(int emp_id, String emp_name) {
+		this.emp_id = emp_id;
+		this.emp_name = emp_name;
+	}
+}
+class Manager extends Employees{
+	String position;
+	void ManagerDetails(String position) {
+		System.out.println(emp_id + " - " + emp_name + " - " + position );
+	}
+}
+
+// MULTI LEVEL
+class Employee{
+	int empl_id;
+	String empl_name;
+	void EmployeeDetails(int empl_id, String empl_name) {
+		this.empl_id = empl_id;
+		this.empl_name = empl_name;
+	}
+}
+class Developer extends Employee{
+	String dept;
+	void DeveloperDetails(String dept) {
+		this.dept = dept;
+	}
+}
+class JavaDeveloper extends Developer{
+	String position;
+	void JavaDeveloperDetails(String position){
+		this.position = position;
+		System.out.println(empl_id + " - " + empl_name + " - " + dept + " - " + position);
+	}
+}
+
+public class singlelevel {
+
+	public static void main(String[] args) {
+		//SINGLE LEVEL INHERITANCE
+		Manager m = new Manager();
+		m.EmployeeDetails(17, "siva");
+		m.ManagerDetails("Manager");
+		
+		//MULTI LEVEL INHERITANCE
+		JavaDeveloper j = new JavaDeveloper();
+		j.EmployeeDetails(1217, "Siva");
+		j.DeveloperDetails("Developer");
+		j.JavaDeveloperDetails("Java Developer");
+		
+		
+	}
+
+}

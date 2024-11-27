@@ -1,0 +1,24 @@
+package Abstraction;
+import java.util.Scanner;
+interface A{
+	void cal();
+	default void run() {
+		System.out.print("Block A");
+	}	
+}
+interface B{
+	default void run() {
+		System.out.print("Block B");
+	}	
+}
+abstract class C implements A,B{
+	public void run() {
+		System.out.print("Block Employee");
+	}
+}
+public class Interface {
+	public static void main(String[] args) {
+		Employee e = new Employee();
+		e.run();
+	}
+}

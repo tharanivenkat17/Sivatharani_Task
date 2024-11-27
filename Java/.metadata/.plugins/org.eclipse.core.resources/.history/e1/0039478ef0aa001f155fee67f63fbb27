@@ -1,0 +1,22 @@
+package Abstraction;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayLists {
+
+	public static void main(String[] args) {
+		List<String> alist = new ArrayList<>();
+		alist.add("Siva");
+		alist.add("Ram");
+		alist.add("Sam");
+		alist.add("Siva");
+		System.out.println(alist);
+		System.out.println(alist.contains("John"));
+		System.out.println(alist.get(2));
+		alist.set(2, "Kiran");
+		System.out.println(alist);
+		System.out.println(alist.indexOf(3));
+	}
+
+}

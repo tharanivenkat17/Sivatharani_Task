@@ -54,10 +54,12 @@ class Employee extends Company{
 public class oopsConcept {
 
 	public static void main(String[] args) {
-		Scanner scan=new Scanner(System.in);
-		int emp_id = scan.nextInt();
-		scan.nextLine();
-		String emp_name = scan.nextLine();
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter Employee Id");
+		int emp_id = scanner.nextInt();
+		scanner.nextLine();
+		System.out.println("Enter Employee Name");
+		String emp_name = scanner.nextLine();
 		//ENCAPSULATION
 		Employee e = new Employee();
 //		Employee e = new Employee(emp_id,emp_name);

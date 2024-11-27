@@ -1,0 +1,22 @@
+package Abstraction;
+
+class OuterClass {
+    private class PrivateInnerClass {
+        void display() {
+            System.out.println("Inside private nested class");
+        }
+    }
+
+    public void PublicInnerClass() {
+        PrivateInnerClass inner = new PrivateInnerClass();
+        inner.display();
+    }
+}
+public class class_Private {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

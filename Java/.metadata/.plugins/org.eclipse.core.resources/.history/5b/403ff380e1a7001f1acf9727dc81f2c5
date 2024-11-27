@@ -1,0 +1,126 @@
+package Abstraction;
+
+//Base Class: Employee (for Single and Multilevel Inheritance)
+class Employee {
+String name;
+int id;
+
+Employee(String name, int id) {
+ this.name = name;
+ this.id = id;
+}
+
+void displayDetails() {
+ System.out.println("Employee Name: " + name);
+ System.out.println("Employee ID: " + id);
+}
+}
+
+//Single Inheritance (Manager inherits Employee)
+class Manager extends Employee {
+String department;
+
+Manager(String name, int id, String department) {
+ super(name, id);  // Call the Employee constructor
+ this.department = department;
+}
+
+void displayManagerDetails() {
+ displayDetails();
+ System.out.println("Department: " + department);
+}
+}
+
+//Multilevel Inheritance (TeamLead inherits Manager, which inherits Employee)
+class TeamLead extends Manager {
+int teamSize;
+
+TeamLead(String name, int id, String department, int teamSize) {
+ super(name, id, department);  // Call the Manager constructor
+ this.teamSize = teamSize;
+}
+
+void displayTeamLeadDetails() {
+ displayManagerDetails();
+ System.out.println("Team Size: " + teamSize);
+}
+}
+
+//Hierarchical Inheritance (Developer and Manager both inherit Employee)
+class Developer extends Employee {
+String programmingLanguage;
+
+Developer(String name, int id, String programmingLanguage) {
+ super(name, id);  // Call the Employee constructor
+ this.programmingLanguage = programmingLanguage;
+}
+
+void displayDeveloperDetails() {
+ displayDetails();
+ System.out.println("Programming Language: " + programmingLanguage);
+}
+}
+
+//Multiple Inheritance using interfaces (interface for contract)
+interface BonusEligible {
+void calculateBonus();
+}
+
+interface WorkFromHomeEligible {
+void workFromHome();
+}
+
+//Employee subclass implementing multiple interfaces
+class SeniorDeveloper extends Employee implements BonusEligible, WorkFromHomeEligible {
+int experience;
+
+SeniorDeveloper(String name, int id, int experience) {
+ super(name, id);
+ this.experience = experience;
+}
+
+void displaySeniorDeveloperDetails() {
+ displayDetails();
+ System.out.println("Experience: " + experience + " years");
+}
+
+@Override
+public void calculateBonus() {
+ System.out.println("Bonus: Calculating based on experience and performance.");
+}
+
+@Override
+public void workFromHome() {
+ System.out.println("Work from home is allowed for senior developers.");
+}
+}
+
+public class InterfaceTask {
+
+	public static void main(String[] args) {
+	   Manager manager = new Manager("Ram", 101, "HR");
+	   manager.displayManagerDetails();
+
+			   System.out.println();
+
+			   // Multilevel Inheritance
+			   TeamLead teamLead = new TeamLead("Siva", 102, "Development", 5);
+			   teamLead.displayTeamLeadDetails();
+
+			   System.out.println();
+
+			   // Hierarchical Inheritance
+			   Developer developer = new Developer("Renu", 103, "Java");
+			   developer.displayDeveloperDetails();
+
+			   System.out.println();
+
+			   // Multiple Inheritance via Interfaces
+			   SeniorDeveloper seniorDev = new SeniorDeveloper("Kaviya", 104, 8);
+			   seniorDev.displaySeniorDeveloperDetails();
+			   seniorDev.calculateBonus();
+			   seniorDev.workFromHome();
+			}
+			}
+	}
+}

@@ -1,0 +1,22 @@
+package Abstraction;
+import java.util.*;
+
+public class Demo_Outer {
+
+	public static void main(String[] args) {
+		Collection<String> collection = new ArrayList<>();
+        collection.add("Apple");
+        collection.add("Banana");
+
+        // Using specific collection class methods
+        System.out.println("Collection contains 'Apple': " + collection.contains("Apple"));
+        System.out.println("Size of collection: " + collection.size());
+
+        // Iterating through collection elements
+        for (String item : collection) {
+            System.out.println(item);
+
+
+	}
+
+}

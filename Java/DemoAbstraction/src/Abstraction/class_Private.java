@@ -1,9 +1,5 @@
 package Abstraction;
 
-//Private class Name{
-//	
-//}
-
 class OuterClass {
     private class PrivateClass {
         void display() {
@@ -20,8 +16,8 @@ class OuterClass {
 public class class_Private {
 
 	public static void main(String[] args) {
-		OuterClass o = new OuterClass();
-		o.Class();
+		OuterClass outerclass = new OuterClass();
+		outerclass.Class();
 
 	}
 

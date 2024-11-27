@@ -1,0 +1,26 @@
+package Abstraction;
+
+class Calculate{
+	public static  int add(int n1, int n2) {
+		return n1+n2;
+	}
+	public static  int add(int n1, int n2, int n3) {
+		return n1+n2+n3;
+	}
+	public static  int add(int n1, int n2, int n3,int n4) {
+		return n1+n2+n3+n4;
+	}
+}
+
+public class Polymorphism {
+
+	public static void main(String[] args) {
+		Calculate c= new Calculate();
+		System.out.println(c.add(4, 9));
+		System.out.println(c.add(4, 9,10));
+		System.out.println(c.add(4, 9,37,29));
+		
+
+	}
+
+}

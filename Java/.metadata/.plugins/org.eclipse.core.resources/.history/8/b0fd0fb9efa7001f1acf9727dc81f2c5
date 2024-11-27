@@ -1,0 +1,23 @@
+package Abstraction;
+import java.util.Scanner;
+interface Employee{
+	void cal();
+	default void run() {
+		System.out.print("Block Employee");
+	}	
+}
+interface Manager{
+	default void run() {
+		System.out.print("Block Manager");
+	}	
+}
+abstract class Developer implements Employee,Manager{
+	public void run() {
+		System.out.print("Block Employee");
+	}
+}
+public class Interface {
+	public static void main(String[] args) {
+		Developer d = new Developer();
+	}
+}

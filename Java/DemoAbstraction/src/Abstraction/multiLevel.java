@@ -10,7 +10,7 @@ class Employee2{
 	}
 }
 class Manager1 extends Employee2{
-	String manager = "Sandhya";
+	String manager = "Saras";
 }
 
 class Developer extends Manager1{

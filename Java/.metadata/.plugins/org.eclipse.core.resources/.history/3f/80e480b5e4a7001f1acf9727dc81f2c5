@@ -1,0 +1,33 @@
+package task;
+
+class Employee{
+	private String emp_name;
+	private int emp_id;
+	
+	public Employee(){
+		System.out.println("Inside Constructor");
+	}
+	
+	public void setData(int emp_id, String emp_name) {
+		this.emp_id = emp_id;
+		this.emp_name = emp_name;
+	}
+	
+	public int getId() {
+		return emp_id;
+	}
+	public String getName() {
+		return emp_name;
+	}
+}
+
+public class oopsConcept {
+
+	public static void main(String[] args) {
+		Employee e = new Employee();
+		e.setData(123, "Ram");
+		System.out.println(e.getId());
+		System.out.println(e.getName());
+	}
+
+}

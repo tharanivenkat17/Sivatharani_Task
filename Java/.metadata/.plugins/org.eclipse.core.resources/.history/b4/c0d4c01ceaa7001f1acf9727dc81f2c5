@@ -1,0 +1,70 @@
+package task;
+import java.util.Scanner;
+
+abstract class Company{
+	abstract void login();
+	abstract void login(int emp_Id, String emp_Name);
+	abstract void work();
+	abstract void logout();
+}
+class Employee extends Company{
+	void login() {
+		System.out.println("Logged In");
+	}
+	void login(int empId, String empName) {
+		System.out.println(empId + "  " + empName + "  " + "Logged In");
+	}
+	void work() {
+		System.out.println("At Work");
+	}
+	void logout() {
+		System.out.println("Logged Out");
+	}
+}
+
+class Employee1{
+	private String emp_name;
+	private int emp_id;
+	
+	public Employee1(){
+		System.out.println("Inside Constructor");
+	}
+	
+	public Employee1(int emp_id,String emp_name){
+		System.out.println(emp_id);
+		System.out.println(emp_name);
+	}
+	
+	public void setData(int emp_id, String emp_name) {
+		this.emp_id = emp_id;
+		this.emp_name = emp_name;
+	}
+	
+	public int getId() {
+		return emp_id;
+	}
+	public String getName() {
+		return emp_name;
+	}
+}
+
+public class oopsConcept {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int emp_id = scan.nextInt();
+		scan.nextLine();
+		String emp_name = scan.nextLine();
+		Employee1 e = new Employee1(emp_id,emp_name);
+		
+		e.setData(123, "Ram");
+		System.out.println(e.getId());
+		System.out.println(e.getName());
+		
+		Employee e1 = new Employee();
+		e1.login(emp_Id, emp_Name);
+		e1.work();
+		e1.logout();
+	}
+
+}

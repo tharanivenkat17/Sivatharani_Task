@@ -1,0 +1,22 @@
+package Abstraction;
+
+import java.util.Set;
+import java.util.HashSet;
+
+public class DemoSet {
+
+	public static void main(String[] args) {
+		Set<Integer> hashset= new HashSet<>();
+		hashset.add(12);
+		hashset.add(93);
+		hashset.add(47);
+		hashset.add(12);
+		System.out.println(hashset);
+		System.out.println(hashset.contains(93));
+		System.out.println(hashset.contains(98));
+		hashset.remove(12);
+		System.out.println(hashset);
+		System.out.println(hashset.isEmpty());
+	}
+
+}

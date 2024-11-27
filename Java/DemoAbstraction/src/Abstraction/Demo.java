@@ -24,14 +24,21 @@ class Employee extends Company{
 
 public class Demo {
 	public static void main(String[] args) {
-		Employee e = new Employee();
-		Scanner scan = new Scanner(System.in);
-		int empId = scan.nextInt();
-		scan.nextLine();
-		String empName = scan.nextLine();
-		e.login(empId, empName);
-		e.work();
-		e.logout();
+		Employee employee = new Employee();
+		Scanner scanner = new Scanner(System.in);
+		int empId = scanner.nextInt();
+		scanner.nextLine();
+		String empName = scanner.nextLine();
+		employee.login(empId, empName);
+		employee.work();
+		employee.logout();
 			
+		
+
+        System.out.println("Enter Array");
+        int array[]=new int[5];
+        for(int i=0;i<6;i++) {
+        	array[i]=scanner.nextInt();
+        }
 	}
 }

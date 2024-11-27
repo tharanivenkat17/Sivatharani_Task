@@ -1,0 +1,19 @@
+package Abstraction;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class LinkedLists {
+
+	public static void main(String[] args) {
+		List<String> alist = new LinkedList<>();
+		alist.add("Siva");
+		alist.addFirst("Ram");
+		alist.addLast("Sam");
+		alist.add("Sri");
+		alist.getFirst();
+		alist.getLast();
+		alist.get(1);
+	}
+
+}

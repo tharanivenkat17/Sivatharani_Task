@@ -1,0 +1,26 @@
+package Abstraction;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Deques {
+
+	public static void main(String[] args) {
+		 Deque<String> deque = new ArrayDeque<>();
+		 
+	     deque.addFirst("Front 1");
+	     deque.addLast("Back 1");
+	     deque.addFirst("Front 2");
+	     deque.addLast("Back 2");
+
+	     System.out.println("Deque after additions: " + deque);
+
+	     System.out.println("Removed from front: " + deque.removeFirst());
+	     System.out.println("Removed from back: " + deque.removeLast()); 
+	     System.out.println("Deque after removals: " + deque);
+	     System.out.println("Front element: " + deque.peekFirst()); 
+	     System.out.println("Back element: " + deque.peekLast()); 
+
+	}
+
+}

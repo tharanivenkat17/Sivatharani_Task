@@ -1,0 +1,19 @@
+package Abstraction;
+
+class Outer{
+	static class Inner{
+		static int number=0;
+	}
+}
+class Child extends Outer{
+	System.out.println(Outer.Inner.number); 
+}
+
+public class Demo_Outer {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

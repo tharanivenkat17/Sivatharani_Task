@@ -1,0 +1,23 @@
+package Abstraction;
+
+import java.util.Stack;
+
+public class Stacks {
+
+	public static void main(String[] args) {
+		Stack<String> stack = new Stack<>();
+        stack.push("Apple");
+        stack.push("Banana");
+        stack.push("Kiwi");
+
+        System.out.println(stack.peek()); 
+        System.out.println(stack.pop()); 
+        System.out.println(stack.empty()); 
+        System.out.println(stack.search("Apple")); 
+        System.out.println( stack.size()); 
+        stack.clear();
+        System.out.println( stack.empty());  
+
+	}
+
+}

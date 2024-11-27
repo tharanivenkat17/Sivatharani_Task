@@ -1,0 +1,38 @@
+package Abstraction;
+
+//MULTI LEVEL
+class Employee{
+	int empl_id;
+	String empl_name;
+	void EmployeeDetails(int empl_id, String empl_name) {
+		this.empl_id = empl_id;
+		this.empl_name = empl_name;
+	}
+}
+class Developer extends Employee{
+	String dept;
+	void DeveloperDetails(String dept) {
+		this.dept = dept;
+	}
+}
+class JavaDeveloper extends Developer{
+	String position;
+	void JavaDeveloperDetails(String position){
+		this.position = position;
+		System.out.println(empl_id + " - " + empl_name + " - " + dept + " - " + position);
+	}
+}
+
+
+public class multiLevel {
+
+	public static void main(String[] args) {
+		//MULTI LEVEL INHERITANCE
+				JavaDeveloper j = new JavaDeveloper();
+				j.EmployeeDetails(1217, "Siva");
+				j.DeveloperDetails("Developer");
+				j.JavaDeveloperDetails("Java Developer");
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package Abstraction;
+import java.util.Scanner;
+interface A{
+	System.out.prin
+}
+abstract class Employee implements Company{
+	public void login(){
+		System.out.println();
+	}
+	
+}
+public class Interface {
+	public static void main(String[] args) {
+		
+	}
+}

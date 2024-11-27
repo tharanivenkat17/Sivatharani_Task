@@ -1,0 +1,47 @@
+package Oops;
+
+import java.util.Scanner;
+
+abstract class Company{
+	abstract void login(int emp_id, String emp_name);
+	abstract void work();
+	abstract void logout();
+	String emp_name;
+	int emp_id;
+}
+class Employee extends Company{
+	void login(int emp_id, String emp_name) {
+		System.out.println(emp_id + "  " + emp_name + "  " + "Logged In");
+		work();
+	}
+	void work() {
+		System.out.println(emp_name + " is at Work");
+		logout();
+	}
+	void logout() {
+		System.out.println(emp_id + " is Logged Out");
+	}
+	
+	public void setData(int emp_id, String emp_name) {
+		this.emp_id = emp_id;
+		this.emp_name = emp_name;
+		login(emp_id, emp_name);
+	}
+}
+
+public class Employees {
+
+	public static void main(String[] args) {
+		
+		Scanner scan=new Scanner(System.in);
+		int emp_id = scan.nextInt();
+		scan.nextLine();
+		String emp_name = scan.nextLine();
+		
+		Employee e = new Employee();
+		
+		e.setData(emp_id,emp_name);
+
+	}
+
+}
