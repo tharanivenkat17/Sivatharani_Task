@@ -1,0 +1,62 @@
+package EmployeeManagementSystem;
+
+import java.util.Scanner;
+
+
+class Data {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		// Method to Add Employee Details
+		public void addEmployee() {
+			
+			System.out.println("Enter Employee Id");
+			int EmployeeId = scanner.nextInt();
+			scanner.nextLine();
+			System.out.println("Enter Employee Name");
+			String EmployeeName = scanner.nextLine();
+			System.out.println("Enter Employee Position");
+			String Position = scanner.nextLine();
+			Employee employee = new Employee( EmployeeId ,EmployeeName, Position);
+			employee.display();
+			choice();
+		}
+			
+		// Method to Display Employee Details
+		void viewEmployee() {
+			display();
+		}	
+		// Method to Delete Employee Details
+		void deleteEmployee() {
+			delete();
+		}
+			
+		void choice(){
+		   	System.out.println("\nEmployee Management System");
+		    System.out.println("1. Add Employee");
+	        System.out.println("2. View Employees");
+		    System.out.println("3. Delete Employee");
+		    System.out.println("4. Exit");
+		    System.out.print("Enter Your Choice ");
+		    int choice = scanner.nextInt();
+		    scanner.nextLine();
+		    // Choice to add view delete Employee
+		     switch (choice) {
+		     	case 1:
+		     		addEmployee();
+		            break;
+		        case 2:
+		            viewEmployee();
+		            break;
+		        case 3:
+		            deleteEmployee();
+		            break;
+		        case 4:
+		            System.out.println("Exiting program.");
+		            break;
+		        default:
+		            System.out.println("Invalid choice.");
+		     }
+		}
+	}
+}

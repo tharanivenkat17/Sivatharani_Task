@@ -8,30 +8,32 @@ import java.util.Scanner;
 
 class ArrayListClass{
 	void method() {
-		List<String> alist = new ArrayList<>();
-		alist.add("Siva");
-		alist.add("Ram");
-		alist.add("Sam");
-		alist.add("Siva");
-		System.out.println(alist);
-		System.out.println(alist.contains("John"));
-		System.out.println(alist.get(2));
-		alist.set(2, "Kiran");
-		System.out.println(alist);
-		System.out.println(alist.indexOf("Ram"));
+		List<String> arraylist = new ArrayList<>();
+		//Add elements
+		arraylist.add("Siva");
+		arraylist.add("Ram");
+		arraylist.add("Sam");
+		arraylist.add("Siva");
 		
-		Collections.sort(alist);
-		for(String name : alist) {
+		System.out.println(arraylist);
+		System.out.println(arraylist.contains("John"));
+		System.out.println(arraylist.get(2));
+		arraylist.set(2, "Kiran");
+		System.out.println(arraylist);
+		System.out.println(arraylist.indexOf("Ram"));
+		
+		Collections.sort(arraylist);
+		for(String name : arraylist) {
 			System.out.println(name);
 		}
-		alist.remove(3);
+		arraylist.remove(3);
 		System.out.println();
-		Collections.sort(alist , Collections.reverseOrder());
-		for(String name : alist) {
+		Collections.sort(arraylist , Collections.reverseOrder());
+		for(String name : arraylist) {
 			System.out.println(name);
 		}
-		alist.removeAll(alist);
-		System.out.println(alist);	
+		arraylist.removeAll(arraylist);
+		System.out.println(arraylist);	
 	}
 	
 	void floatMethod() {

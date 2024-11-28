@@ -1,0 +1,50 @@
+package EmployeeManagementSystem;
+
+import java.util.Scanner;
+
+class Employee{
+	private int EmployeeId;
+	private String EmployeeName;
+	private String Position;
+	
+	//Default Constructor
+	public Employee() {
+		
+	}
+	//Constructor
+	public Employee(int EmployeeId, String EmployeeName, String Position){
+		this.EmployeeId = EmployeeId;
+		this.EmployeeName = EmployeeName;
+		this.Position = Position;
+	}
+	//Getter
+	public int getEmployeeId(){
+		return EmployeeId;
+	}
+	public String getEmployeeName(){
+		return EmployeeName;
+	}
+	public String getPosition(){
+		return Position;
+	}
+	
+	//Display
+	void display() {
+		System.out.println(getEmployeeId());
+		System.out.println(getEmployeeName());
+		System.out.println(getPosition());
+	}
+}
+
+public class EmployeeManagementSystem {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int EmployeeId = scanner.nextInt();
+//		scanner.nextLine();
+		String EmployeeName = scanner.nextLine();
+		String Position = scanner.nextLine();
+		
+		Employee employee = new Employee( EmployeeId ,EmployeeName, Position);
+		employee.display();
+	}
+}

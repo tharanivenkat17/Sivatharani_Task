@@ -61,21 +61,21 @@ public class oopsConcept {
 		System.out.println("Enter Employee Name");
 		String emp_name = scanner.nextLine();
 		//ENCAPSULATION
-		Employee e = new Employee();
+		Employee employee = new Employee();
 //		Employee e = new Employee(emp_id,emp_name);
 		
 		// SETTER AND GETTER
-//		System.out.println();
-//		System.out.println("CONSTRUCTOR");
-		e.setData(emp_id,emp_name);
+		System.out.println();
+		System.out.println("CONSTRUCTOR");
+		employee.setData(emp_id,emp_name);
 //		System.out.println(e.getId());
 //		System.out.println(e.getName());
 		
 		// ABSTRACTION
 //		System.out.println("ABSTRACTION");
-		Employee e1 = new Employee();
-		e1.login(emp_id, emp_name);
-		e1.work();
-		e1.logout();
+		Employee employee1 = new Employee();
+		employee1.login(emp_id, emp_name);
+		employee1.work();
+		employee1.logout();
 	}
 }

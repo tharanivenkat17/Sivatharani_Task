@@ -5,29 +5,29 @@ import java.util.Set;
 
 class LinkedHashSetClass{
 	void display() {
-		Set<Integer> lhashset= new LinkedHashSet<>();
-		lhashset.add(12);
-		lhashset.add(93);
-		lhashset.add(47);
-		lhashset.add(12);
-		System.out.println(lhashset);
-		System.out.println(lhashset.contains(93));
-		System.out.println(lhashset.contains(98));
-		lhashset.remove(12);
-		System.out.println(lhashset);
-		System.out.println(lhashset.isEmpty());
-		System.out.println(lhashset.size());
-		Set<Integer> lhashset1= new LinkedHashSet<>();
-		lhashset1.add(13);
-		lhashset1.add(94);
-		lhashset1.add(45);
-		lhashset1.add(13);
-		lhashset.addAll(lhashset1);
-		System.out.println(lhashset);
-		for(int number : lhashset) {
+		Set<Integer> linkedhashset= new LinkedHashSet<>();
+		linkedhashset.add(12);
+		linkedhashset.add(93);
+		linkedhashset.add(47);
+		linkedhashset.add(12);
+		System.out.println(linkedhashset);
+		System.out.println(linkedhashset.contains(93));
+		System.out.println(linkedhashset.contains(98));
+		linkedhashset.remove(12);
+		System.out.println(linkedhashset);
+		System.out.println(linkedhashset.isEmpty());
+		System.out.println(linkedhashset.size());
+		Set<Integer> linkedhash= new LinkedHashSet<>();
+		linkedhash.add(13);
+		linkedhash.add(94);
+		linkedhash.add(45);
+		linkedhash.add(13);
+		linkedhash.addAll(linkedhash);
+		System.out.println(linkedhash);
+		for(int number : linkedhash) {
 			System.out.println(number);
 		}
-		lhashset.removeAll(lhashset1);
+		linkedhash.removeAll(linkedhash);
 	}
 }
 

@@ -1,8 +1,6 @@
 package Abstraction;
 
-
 public class Nested_Try {
-
 	public static void main(String[] args) { 
 		  try{
 			  try
@@ -15,17 +13,16 @@ public class Nested_Try {
 			  {  
 			    System.out.println(e);  
 			  }
-//			  finally {
-//				  System.out.println("Finally Execute");
-//			  }
+			  finally {
+				  System.out.println("Finally Execute");
+			  }
 		      System.out.println("Execute");
 		  }
 		  
-		  catch(ArithmeticException e) {
+		  catch(ArithmeticException e){
 			  System.out.println(e);
 		  }
-
+		  
 		  System.out.println("Outer try");
 	}
-
 }

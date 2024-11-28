@@ -1,0 +1,51 @@
+package EmployeeManagementSystem;
+
+import java.util.Scanner;
+
+class Employee{
+	private int EmployeeId;
+	private String EmployeeName;
+	private float Salary;
+	//Default Constructor
+	public Employee() {
+		
+	}
+	//Constructor
+	public Employee(int EmployeeId, String EmployeeName, float Salary){
+		this.EmployeeId = EmployeeId;
+		this.EmployeeName = EmployeeName;
+		this.Salary = Salary;
+	}
+	//Getter
+	public int getEmployeeId(){
+		return EmployeeId;
+	}
+	public String getEmployeeName(){
+		return EmployeeName;
+	}
+	public float getSalary(){
+		return Salary;
+	}
+	//Setter
+//	public void setEmployeeId(int EmployeeId){
+//		this.EmployeeId=EmployeeId;
+//	}
+//	public void setEmployeeName(String EmployeeName){
+//		this.EmployeeName=EmployeeName;
+//	}
+//	public void setSalary(float Salary){
+//		this.Salary=Salary;
+//	}
+}
+
+public class EmployeeManagementSystem {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String EmployeeName = scanner.nextLine();
+		int EmployeeId = scanner.nextInt();
+		float Salary = scanner.nextFloat();
+		
+		Employee employee = new Employee( EmployeeId ,EmployeeName, Salary);
+		
+	}
+}
